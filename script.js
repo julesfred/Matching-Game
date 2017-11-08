@@ -30,3 +30,5 @@ function flipit() {
     $(".back").removeClass("hide");
     $(".card").flip();
 }
+
+flipit();
