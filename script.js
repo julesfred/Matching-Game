@@ -31,4 +31,6 @@ function flipit() {
     $(".card").flip();
 }
 
+
+
 flipit();
