@@ -3,10 +3,7 @@ body {
 }
 
 .container div {
-    background-image: url("../images/grantchirpus.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+    /* background-image: url("../images/grantchirpus.jpg"); */
 }
 
 .container {
@@ -24,4 +21,45 @@ body {
 .buttoncontainer {
     display: flex;
     justify-content: center;
+}
+
+.card1 {
+    background-image: url("../images/adam.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.card2 {
+    background-image: url("../images/yasmine.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.card3 {
+    background-image: url("../images/kim.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.card4 {
+    background-image: url("../images/christian.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.card5 {
+    background-image: url("../images/lyra.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+.card6 {
+    background-image: url("../images/julie.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
 }
