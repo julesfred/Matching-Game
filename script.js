@@ -1,4 +1,10 @@
+function startGame() {
 
+jQuery(document).ready(function($){
+  
+$(".container").css("display", "grid");
+
+});
 
 $(function () {
   var parent = $(".container");
@@ -34,3 +40,9 @@ function flipit() {
 
 
 flipit();
+
+}
+
+function restartGame(){
+  startGame();
+}
