@@ -31,9 +31,15 @@
 $(document).ready(function() {
   $("#start").on("click", function(event) {
     $(".container").css("display", "grid");
+
+    var parent = $(".container");
+    var divs = parent.children();
+    while (divs.length) {
+      parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
   });
 
-  
+
   function flipit() {
     $(".back").removeClass("hide");
     $(".card").flip();
@@ -41,13 +47,9 @@ $(document).ready(function() {
   flipit();
 
 
-  $(function () {
-    var parent = $(".container");
-    var divs = parent.children();
-    while (divs.length) {
-      parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-    }
-  });
+  
+    
+
 
   
 });
