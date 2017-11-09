@@ -40,11 +40,17 @@ $(document).ready(function() {
   });
 
 
-  function flipit() {
+  $(".card").on("click", function() {
     $(".back").removeClass("hide");
     $(".card").flip();
-  }
-  flipit();
+    $(this).addClass("clicked");
+  });
+
+  $(".card").on("flip:done", function() {
+    if ($(this).hasClass("clicked")) {
+      $(".card").flip(false);
+    }
+  });
 
 
   
