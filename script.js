@@ -1,6 +1,6 @@
 // $(document).ready(function() {
 
-// function startGame() { 
+// function startGame() {
 //   $(".container").css("display", "grid");
 // }
 
@@ -32,6 +32,9 @@ $(document).ready(function() {
   $("#start").on("click", function(event) {
     $(".container").css("display", "grid");
 
+
+
+
     var parent = $(".container");
     var divs = parent.children();
     while (divs.length) {
@@ -57,12 +60,12 @@ $(document).ready(function() {
 
 $(".restart").on("click", function(event) {
     $(".card").flip(false);
-    
+
         var parent = $(".container");
         var divs = parent.children();
         while (divs.length) {
           parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
         }
     });
-  
+
 });

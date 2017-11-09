@@ -1,5 +1,8 @@
 body {
-    background-image: url("../images/background.jpg")
+    background-image: url("../images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 .container div {
@@ -7,15 +10,24 @@ body {
 }
 
 .container {
+
     display: none;
-    grid-template-rows: repeat(4, 100px);
-    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 105px);
+    grid-template-columns: repeat(3, 105px);
     justify-content: center;
+}
+#start:hover {
+  opacity: 0.3;
+}
+
+.restart:hover {
+  opacity: 0.3;
 }
 
 .buttoncontainer button{
+    font-weight: 900;
     width: 150px;
-    height: 50px; 
+    height: 50px;
     margin: 20px;
     background-color: #E65F12;
     border: 3px solid #9C3F0D;
@@ -26,7 +38,19 @@ body {
     display: flex;
     justify-content: center;
 }
+img {
+    border-radius: 10%;
+}
 
+.card {
+  border: solid white 2px;
+  border-radius: 10%;
+}
+
+.card:hover div {
+    -webkit-filter: grayscale(100%);
+
+}
 .card1 {
     background-image: url("../images/adam.jpg");
     width: 100px;
@@ -70,4 +94,19 @@ body {
 
 .hide {
     display: none;
+}
+
+@media only screen and (min-width:1200px){
+    img {
+        min-width: 200px;
+        max-height:200px;
+        border-radius: 10%;
+
+    }
+    .container {
+        display: none;
+        grid-template-rows: repeat(2, 205px);
+        grid-template-columns: repeat(6, 205px);
+        justify-content: center;
+    }
 }
