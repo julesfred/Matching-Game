@@ -1,40 +1,41 @@
 // $(document).ready(function() {
+//   $("#start").on("click", function(event) {
+//     $(".container").css("display", "grid");
 
-// function startGame() {
-//   $(".container").css("display", "grid");
-// }
 
-// $(function () {
-//   var parent = $(".container");
-//   var divs = parent.children();
-//   while (divs.length) {
-//     parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-//   }
+
+
+//     var parent = $(".container");
+//     var divs = parent.children();
+//     while (divs.length) {
+//       parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+//     }
+//   });
+
+
+// $(".card").on("click", function() {
+//   $(this).children(".front").css("-webkit-transform", "perspective(800px) rotateY(180deg)");
+//   $(this).children(".back").css("-webkit-transform", "perspective(800px) rotateY(0)");
+//   $(this).children(".front").toggleClass("change");
+//   $(this).children(".back").toggleClass("change2");
 // });
 
 
-// function flipit() {
-//     $(".back").removeClass("hide");
-//     $(".card").flip();
-// }
 
-
-
-// flipit();
-
-// function restartGame(){
-//   $(".container").flip();
-// }
+// $(".restart").on("click", function(event) {
+//         var parent = $(".container");
+//         var divs = parent.children();
+//         while (divs.length) {
+//           parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+//         }
+//     });
 
 // });
+
 
 $(document).ready(function() {
   $("#start").on("click", function(event) {
     $(".container").css("display", "grid");
-
-
-
-
     var parent = $(".container");
     var divs = parent.children();
     while (divs.length) {
@@ -42,18 +43,35 @@ $(document).ready(function() {
     }
   });
 
+ $(".card").flip({ trigger: "click" });
 
-  $(".card").on("click", function() {
+ var cardOne = null;
+  var cardTwo = null;
+
+ $(".card").on("click", function() {
     $(".back").removeClass("hide");
-    $(".card").flip();
-    $(this).addClass("clicked");
-  });
-
-  $(".card").on("flip:done", function() {
-    if ($(this).hasClass("clicked")) {
-      // $(".card").flip(false);
+    if (cardOne === null) {
+      cardOne = $(this);
+      console.log(cardOne);
+    } else {
+      cardTwo = $(this);
+      if ( ($(cardOne).children(".back").attr("flipped") === $(cardTwo).children(".back").attr("flipped")) ) {
+        console.log("yay a match");
+        $(cardOne).fadeOut(4000);
+        $(cardTwo).fadeOut(4000);
+        cardOne = null;
+        cardTwo = null;
+      } else {
+        console.log("sucks");
+        $(cardOne).flip(false);
+        $(cardTwo).flip(false);
+        cardOne = null;
+        cardTwo = null;
+      }
     }
-  });
+  })
+
+
 
 
 
@@ -61,7 +79,7 @@ $(document).ready(function() {
 $(".restart").on("click", function(event) {
     $(".card").flip(false);
 
-        var parent = $(".container");
+       var parent = $(".container");
         var divs = parent.children();
         while (divs.length) {
           parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);

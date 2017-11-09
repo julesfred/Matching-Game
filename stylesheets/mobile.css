@@ -42,59 +42,63 @@ img {
     border-radius: 10%;
 }
 
-.card {
-  border: solid white 2px;
-  border-radius: 10%;
-}
-
 .card:hover div {
     -webkit-filter: grayscale(100%);
 
 }
-.card1 {
-    background-image: url("../images/adam.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+
+
+
+/* .card {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    display: inline-block;
+    z-index: 101;
+    border: solid white 2px;
+    border-radius: 10%; 
 }
 
-.card2 {
-    background-image: url("../images/yasmine.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+.card > div {
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    position: absolute;
+    left:0;
+    top:0;
+    -moz-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    width:100%;
+    height:100%;
+    color:white;
+    text-align:center;
 }
 
-.card3 {
-    background-image: url("../images/kim.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+.card .front{
+    z-index: 101;
+    -moz-transform:perspective(800px) rotateY(0deg);
+    -webkit-transform:perspective(800px) rotateY(0deg);
+    transform:perspective(800px) rotateY(0deg);
 }
 
-.card4 {
-    background-image: url("../images/christian.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+.card .back{
+    -moz-transform:perspective(800px) rotateY(-180deg);
+    -webkit-transform:perspective(800px) rotateY(-180deg);
+    transform:perspective(800px) rotateY(-180deg);
+    
 }
 
-.card5 {
-    background-image: url("../images/lyra.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
-}
-.card6 {
-    background-image: url("../images/julie.jpg");
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+.change {
+    -webkit-transform: perspective(800px) rotateY(180deg);
 }
 
-.hide {
-    display: none;
-}
+.change2 {
+    -webkit-transform: perspective(800px) rotateY(0deg);
+} */
 
 @media only screen and (min-width:1200px){
     img {
