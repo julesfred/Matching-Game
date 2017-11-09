@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-
+    position: relative;
     display: none;
     grid-template-rows: repeat(4, 105px);
     grid-template-columns: repeat(3, 105px);
@@ -58,7 +58,7 @@ img {
     display: inline-block;
     z-index: 101;
     border: solid white 2px;
-    border-radius: 10%; 
+    border-radius: 10%;
 }
 
 .card > div {
@@ -89,7 +89,7 @@ img {
     -moz-transform:perspective(800px) rotateY(-180deg);
     -webkit-transform:perspective(800px) rotateY(-180deg);
     transform:perspective(800px) rotateY(-180deg);
-    
+
 }
 
 .change {
@@ -100,17 +100,22 @@ img {
     -webkit-transform: perspective(800px) rotateY(0deg);
 } */
 
+.card {
+    border-radius: 10%;
+}
+
 @media only screen and (min-width:1200px){
     img {
-        min-width: 200px;
-        max-height:200px;
+        min-width: 185px;
+        max-height: 185px;
         border-radius: 10%;
 
     }
     .container {
         display: none;
-        grid-template-rows: repeat(2, 205px);
-        grid-template-columns: repeat(6, 205px);
+        grid-template-rows: repeat(2, 190px);
+        grid-template-columns: repeat(6, 190px);
         justify-content: center;
     }
 }
+Add Comment
