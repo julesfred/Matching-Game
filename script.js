@@ -43,22 +43,25 @@ $(document).ready(function() {
     }
   });
 
- $(".card").flip({ trigger: "click" });
+  $(".card").flip({ trigger: "click" });
 
- var cardOne = null;
+  var cardOne = null;
   var cardTwo = null;
 
- $(".card").on("click", function() {
+  $(".card").on("click", function() {
+
     $(".back").removeClass("hide");
+
     if (cardOne === null) {
       cardOne = $(this);
       console.log(cardOne);
     } else {
       cardTwo = $(this);
+
       if ( ($(cardOne).children(".back").attr("flipped") === $(cardTwo).children(".back").attr("flipped")) ) {
         console.log("yay a match");
-        $(cardOne).fadeOut(4000);
-        $(cardTwo).fadeOut(4000);
+        $(cardOne).children(".back").fadeOut(4000);
+        $(cardTwo).children(".back").fadeOut(4000);
         cardOne = null;
         cardTwo = null;
       } else {
@@ -68,22 +71,21 @@ $(document).ready(function() {
         cardOne = null;
         cardTwo = null;
       }
+
     }
+
+
   })
 
 
 
-
-
-
-$(".restart").on("click", function(event) {
+  $(".restart").on("click", function(event) {
+    $(".back").css("backface-visibility", "visible");
+    $(".front").css("backface-visibility", "visible");
     $(".card").flip(false);
 
-       var parent = $(".container");
-        var divs = parent.children();
-        while (divs.length) {
-          parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-        }
-    });
+  });
+
+
 
 });
