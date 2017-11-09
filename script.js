@@ -48,14 +48,21 @@ $(document).ready(function() {
 
   $(".card").on("flip:done", function() {
     if ($(this).hasClass("clicked")) {
-      $(".card").flip(false);
+      // $(".card").flip(false);
     }
   });
 
 
-  
+
+
+$(".restart").on("click", function(event) {
+    $(".card").flip(false);
     
-
-
+        var parent = $(".container");
+        var divs = parent.children();
+        while (divs.length) {
+          parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+    });
   
 });
