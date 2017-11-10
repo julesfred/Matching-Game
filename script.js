@@ -30,20 +30,21 @@ $(".card").on("click", function() {
     $(this).addClass("change");
     if (($(cardOne).children(".back").attr("flipped") === $(cardTwo).children(".back").attr("flipped")) ) {
       console.log("yay a match");
-      $(cardTwo).delay(3000).removeClass("change").css("visibility", "hidden");
-        console.log("cardtwo");
-        $(cardOne).delay(3000).removeClass("change").css("visibility", "hidden");
-          console.log("cardOne");
+      setTimeout(function(){
+        if($(".card").hasClass("change")){
+          $(".change").removeClass("change").css("visibility", "hidden");
+        }
+      }, 3000)
       cardOne = null;
       cardTwo = null;
       wins++;
       console.log(wins);
     } else {
-      $(cardOne).delay(3000).removeClass("change");
-      $(cardTwo).addClass("change").delay(3000).queue(function(next){
-        $(this).removeClass("change");
-        next();
-      });
+      setTimeout(function(){
+        if($(".card").hasClass("change")){
+          $(".card").removeClass("change");
+        }
+      }, 3000)
       cardOne = null;
       cardTwo = null;
     }
