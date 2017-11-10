@@ -51,6 +51,8 @@ div p {
 }
 img {
     border-radius: 10%;
+    width: 100px;
+    height: 100px;
 }
 
 .card:hover div {
@@ -68,7 +70,7 @@ img {
     position: relative;
     display: inline-block;
     z-index: 101;
-    border: solid white 2px;
+    
     border-radius: 10%;
     transition: 1s all;
 }
@@ -132,8 +134,8 @@ img {
         font-size: 40px;
     }
     img {
-        min-width: 185px;
-        max-height: 185px;
+        width: 185px;
+        height: 185px;
         border-radius: 10%;
     }
     .container {
