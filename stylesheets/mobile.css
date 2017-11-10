@@ -49,7 +49,7 @@ img {
 
 
 
-/* .card {
+.card {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
@@ -59,6 +59,7 @@ img {
     z-index: 101;
     border: solid white 2px;
     border-radius: 10%;
+    transition: 1s all;
 }
 
 .card > div {
@@ -83,6 +84,7 @@ img {
     -moz-transform:perspective(800px) rotateY(0deg);
     -webkit-transform:perspective(800px) rotateY(0deg);
     transform:perspective(800px) rotateY(0deg);
+    transition: 1s all;
 }
 
 .card .back{
@@ -93,12 +95,16 @@ img {
 }
 
 .change {
-    -webkit-transform: perspective(800px) rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .change2 {
-    -webkit-transform: perspective(800px) rotateY(0deg);
-} */
+
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+
+}
 
 .card {
     border-radius: 10%;
@@ -118,4 +124,3 @@ img {
         justify-content: center;
     }
 }
-Add Comment
