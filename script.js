@@ -59,7 +59,7 @@ $(".card").on("click", function() {
       cardTwo = null;
     }
   }
-  if (wins >= 6) {
+  if (wins >= 10) {
     $(".card").off("click");
     console.log("You win!");
   }

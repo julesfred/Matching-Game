@@ -11,6 +11,8 @@ div p {
     display: flex;
     justify-content: center;
     font-family: 'Fascinate Inline';
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .container div {
@@ -21,8 +23,8 @@ div p {
     margin-top: -76px;
     position: relative;
     display: none;
-    grid-template-rows: repeat(4, 105px);
-    grid-template-columns: repeat(3, 105px);
+    grid-template-rows: repeat(5, 65px);
+    grid-template-columns: repeat(5, 65px);
     justify-content: center;
 }
 #start:hover {
@@ -37,7 +39,7 @@ div p {
     font-weight: 900;
     width: 150px;
     height: 50px;
-    margin: 20px;
+    margin: 0px 20px 0px 20px;
     background-color: #E65F12;
     border: 3px solid #9C3F0D;
     color: white;
@@ -47,12 +49,12 @@ div p {
     display: flex;
     justify-content: center;
     padding-bottom: -2px;
-    padding-top: 19px;
+    padding-top: 10px;
 }
 img {
     border-radius: 10%;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 .card:hover div {
@@ -135,18 +137,18 @@ audio {
 
 @media only screen and (min-width:1200px){
     div p {
-        font-size: 40px;
+        font-size: 55px;
     }
     img {
-        width: 185px;
-        height: 185px;
+        width: 120px;
+        height: 120px;
         border-radius: 10%;
     }
     .container {
         margin-top: -68px;
         display: none;
-        grid-template-rows: repeat(2, 190px);
-        grid-template-columns: repeat(6, 190px);
+        grid-template-rows: repeat(5, 125px);
+        grid-template-columns: repeat(5, 125px);
         justify-content: center;
     }
 }
