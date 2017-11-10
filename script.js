@@ -17,7 +17,7 @@ $(document).ready(function() {
   });
 
   $(".restart").on("click", function(){
-    console.log("reset");
+    $(".wincontainer").css("display", "none");
     $(".card").removeClass("change").css("visibility", "visible");
     var parent = $(".container");
     var divs = parent.children();
@@ -60,19 +60,14 @@ $(".card").on("click", function() {
     }
   }
   if (wins >= 10) {
-    $(".card").off("click");
     console.log("You win!");
+    $(".wincontainer").text("You won the game!");
+    wins = 0;
   }
 });
 
 
 
-$(".restart").on("click", function(event) {
-        var parent = $(".container");
-        var divs = parent.children();
-        while (divs.length) {
-          parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-        }
-    });
+
 
 });

@@ -15,10 +15,6 @@ div p {
     margin-bottom: 10px;
 }
 
-.container div {
-    /* background-image: url("../images/grantchirpus.jpg"); */
-}
-
 .container {
     margin-top: -76px;
     position: relative;
@@ -51,6 +47,7 @@ div p {
     padding-bottom: -2px;
     padding-top: 10px;
 }
+
 img {
     border-radius: 10%;
     width: 60px;
@@ -127,6 +124,17 @@ audio {
 
 .card {
     border-radius: 10%;
+}
+
+.wincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fascinate Inline';
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #E65F12;
+    font-size: 35px;
 }
 
 @media only screen and (min-width:400px) {
