@@ -40,7 +40,10 @@ $(".card").on("click", function() {
       console.log(wins);
     } else {
       $(cardOne).delay(3000).removeClass("change");
-      $(cardTwo).delay(3000).removeClass("change");
+      $(cardTwo).addClass("change").delay(3000).queue(function(next){
+        $(this).removeClass("change");
+        next();
+      });
       cardOne = null;
       cardTwo = null;
     }
