@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#start").on("click", function(event) {
-    $(".container").css("display", "grid");
+    $(".container").css("display", "grid").animate({top: '100px'});
 
 
 

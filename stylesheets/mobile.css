@@ -5,11 +5,19 @@ body {
     height: 100vh;
 }
 
+div h1{
+    color: #8ed3da;
+    display: flex;
+    justify-content: center;
+    font-family: 'Fascinate Inline';
+}
+
 .container div {
     /* background-image: url("../images/grantchirpus.jpg"); */
 }
 
 .container {
+    margin-top: -76px;
     position: relative;
     display: none;
     grid-template-rows: repeat(4, 105px);
@@ -37,6 +45,8 @@ body {
 .buttoncontainer {
     display: flex;
     justify-content: center;
+    padding-bottom: -2px;
+    padding-top: 19px;
 }
 img {
     border-radius: 10%;
@@ -118,6 +128,7 @@ img {
 
     }
     .container {
+        margin-top: -68px;
         display: none;
         grid-template-rows: repeat(2, 190px);
         grid-template-columns: repeat(6, 190px);
