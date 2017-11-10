@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("*").dblclick(function(e){
     e.preventDefault();
-    
+
   });
   $("#start").on("click", function(event) {
     $(".container").css("display", "grid").animate({top: '100px'});
@@ -9,6 +9,16 @@ $(document).ready(function() {
 
 
 
+    var parent = $(".container");
+    var divs = parent.children();
+    while (divs.length) {
+      parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+  });
+
+  $(".restart").on("click", function(){
+    console.log("reset");
+    $(".card").removeClass("change").css("visibility", "visible");
     var parent = $(".container");
     var divs = parent.children();
     while (divs.length) {
